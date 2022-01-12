@@ -1,0 +1,22 @@
+.nav {
+    grid-area: nav;
+
+    background-color: white;
+    border-radius: 10px;
+}
+
+.item {
+    color: black;
+
+    margin: 20px;
+
+    transition: transform .2s linear;
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+.active {
+    color: green;
+}
