@@ -14,3 +14,10 @@ ul li {
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
 }
+
+.app-wrapper-content {
+  grid-area: content;
+
+  background-color: white;
+  border-radius: 10px;
+}
