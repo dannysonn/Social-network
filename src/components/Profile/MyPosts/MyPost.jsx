@@ -1,10 +1,10 @@
-import classes from './MyPost.module.css';
 import Post from "./Post/Post";
+import classes from './MyPost.module.css';
 
 const MyPost = () => {
     return (
-        <div>
-            My posts
+        <div className={classes.posts}>
+            <h2>My posts</h2>
 
             <div>
                 <textarea></textarea>

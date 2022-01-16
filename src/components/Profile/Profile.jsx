@@ -1,14 +1,10 @@
 import classes from './Profile.module.css';
 import MyPost from "./MyPosts/MyPost";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = () => {
     return (<div>
-        <div>
-            <img className={classes.profile__background} src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/8f32bc123453083.60eebc66ae6fd.jpg" alt=""/>
-        </div>
-        <div>
-            avatar + descr
-        </div>
+        <ProfileInfo/>
         <MyPost />
     </div>);
 }

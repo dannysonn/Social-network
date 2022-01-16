@@ -1,0 +1,10 @@
+.profile__description {
+    margin: 20px;
+}
+
+.profile__background {
+    width: 70%;
+    height: 300px;
+
+    border-radius: 10px;
+}

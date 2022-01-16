@@ -1,0 +1,24 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogs__names {
+    margin: 15px;
+}
+
+.dialogs__names .active {
+    color: green;
+}
+
+.dialogs__name {
+    padding: 5px;
+}
+
+.dialogs__messages {
+    margin: 15px;
+}
+
+.dialogs__message {
+    padding: 5px;
+}
