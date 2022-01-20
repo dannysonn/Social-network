@@ -3,7 +3,7 @@ import Friend from "./Friend/Friend";
 
 const Friends = (props) => {
 
-    let friendsElement = props.state.dialogsData.map(friend => <Friend name={friend.name} img={friend.img}/>)
+    let friendsElement = props.state.friends.map(friend => <Friend name={friend.name} img={friend.img}/>)
 
     return (
         <div>
