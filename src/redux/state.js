@@ -1,3 +1,5 @@
+import {renderEntireTree} from "../render";
+
 let state = {
     profilePage: {
         posts: [
@@ -52,6 +54,15 @@ let state = {
             {id: 3, name: 'Kaska', img: 'https://media.kg-portal.ru/anime/b/berserk/images/berserk_184s.jpg'},
         ]
     },
+}
+
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5, message: postMessage, likes: 0
+    };
+
+    state.profilePage.posts.push(newPost);
+    renderEntireTree(state);
 }
 
 export default state;

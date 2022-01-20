@@ -1,6 +1,7 @@
 import classes from './Dialogs.module.css';
 import DialogsName from "./DialogsName/DialogsName";
 import Message from "./Message/Message";
+import React from "react";
 
 
 const Dialogs = (props) => {
@@ -10,6 +11,13 @@ const Dialogs = (props) => {
 
     let messageElements = props.state.messages.map(message => <Message message={message.message}/>)
 
+    let newMessage = React.createRef();
+
+    let addMessage = () => {
+        let text = newMessage.current.value;
+        alert(text);
+    }
+
     return (
         <div>
             <div className={classes.dialogs}>
@@ -18,6 +26,10 @@ const Dialogs = (props) => {
                 </div>
                 <div className={classes.dialogs__messages}>
                     {messageElements}
+                </div>
+                <div>
+                    <textarea ref={newMessage}></textarea>
+                    <button onClick={addMessage}>Send</button>
                 </div>
             </div>
         </div>
