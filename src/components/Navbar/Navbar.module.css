@@ -19,7 +19,7 @@
 }
 
 .item a.active {
-    color: green;
+    color: #5cdb4c;
 }
 
 .item:hover {

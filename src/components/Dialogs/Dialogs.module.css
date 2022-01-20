@@ -33,3 +33,23 @@
 .dialogs__message {
     padding: 5px;
 }
+
+.sendButton {
+    width: 100px;
+    height: 45px;
+
+    padding: 0;
+
+    border: none;
+    background: black;
+
+    color: white;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.addMessage {
+    display: flex;
+
+    margin: 10px;
+}

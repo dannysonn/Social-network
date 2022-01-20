@@ -21,3 +21,14 @@ ul li {
   background-color: white;
   border-radius: 10px;
 }
+
+textarea {
+  height: 43px;
+  resize: none;
+
+  padding: 0;
+
+  border: 1px solid #5cdb4c;
+
+  vertical-align: middle;
+}
