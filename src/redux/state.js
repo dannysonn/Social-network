@@ -41,6 +41,7 @@ let state = {
             {id: 4, message: 'What about u?'},
             {id: 5, message: 'Ye, me too'},
         ],
+        newMessageText: 'send message',
     },
     sidebar: {
         friends: [
@@ -82,7 +83,13 @@ export const addMessage = (message) => {
     };
 
     state.dialogsPage.messages.push(newMessage);
-    renderEntireTree(state);
+    state.dialogsPage.newMessageText = '';
+    renderEntireTree();
+}
+
+export const updateNewMessageText = (newText) => {
+    state.dialogsPage.newMessageText = newText;
+    renderEntireTree();
 }
 
 export const subscribe = (observer) => {
