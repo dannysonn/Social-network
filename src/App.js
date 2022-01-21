@@ -10,7 +10,7 @@ import Settings from "./components/Settings/Settings";
 
 
 const App = (props) => {
-    debugger;
+
     return (
 
             <div className='app-wrapper'>
@@ -25,6 +25,7 @@ const App = (props) => {
                         <Route path='/dialogs' element={<Dialogs state={props.state.dialogsPage}
                                                                  addMessage={props.addMessage}
                                                                  updateNewMessageText={props.updateNewMessageText}
+                                                                 newMessageText={props.state.dialogsPage.newMessageText}
                         />}/>
                         <Route path='/news' element={<News/>}/>
                         <Route path='/music' element={<Music/>}/>

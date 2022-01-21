@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import {BrowserRouter} from "react-router-dom";
 import App from "./App";
 
-let renderEntireTree = (state) => {
+let renderEntireTree = () => {
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>

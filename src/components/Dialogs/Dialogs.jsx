@@ -6,6 +6,8 @@ import React from "react";
 
 const Dialogs = (props) => {
 
+    debugger;
+
     let dialogElements = props.state.dialogsData.map(dialog => <DialogsName name={dialog.name} id={dialog.id} img={dialog.img}/>)
 
 
@@ -32,7 +34,7 @@ const Dialogs = (props) => {
                     {messageElements}
                 </div>
                 <div className={classes.addMessage}>
-                    <textarea onChange={onMessageChange} ref={newMessage} value={props.newMessageText}></textarea>
+                    <textarea onChange={onMessageChange} ref={newMessage} value={props.newMessageText} />
                     <button className={classes.sendButton} onClick={addMessage}>Send</button>
                 </div>
             </div>
