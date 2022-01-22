@@ -6,8 +6,6 @@ import React from "react";
 
 const Dialogs = (props) => {
 
-    debugger;
-
     let dialogElements = props.state.dialogsData.map(dialog => <DialogsName name={dialog.name} id={dialog.id} img={dialog.img}/>)
 
 

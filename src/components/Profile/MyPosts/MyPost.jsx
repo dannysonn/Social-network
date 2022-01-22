@@ -4,8 +4,6 @@ import React from "react";
 
 const MyPost = (props) => {
 
-    debugger;
-
     let newPostElement = React.createRef();
 
     let postElements = props.posts.map(post =>
