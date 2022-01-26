@@ -4,6 +4,7 @@ import Friends from '../Friends/Friends';
 
 const Navbar = (props) => {
 
+
     return (<nav className={classes.nav}>
         <div className={classes.item}>
             <NavLink to='/profile' className={({ isActive })=> isActive ? classes.active : ""}>Profile</NavLink>
