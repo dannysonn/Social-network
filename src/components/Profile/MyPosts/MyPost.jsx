@@ -11,16 +11,13 @@ const MyPost = (props) => {
         <Post message={post.message} likes={post.likes}/>
     );
 
-    let addPost = () => {
-        //props.addPost();
-        props.dispatch(addPostActionCreator());
+    let onAddPost = () => {
+        props.addPost();
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        //props.updateNewPostText(text);
-        let action = updatePostActionCreator(text);
-        props.dispatch(action);
+        props.updateNewPostText(text);
     }
 
     return (
@@ -29,7 +26,7 @@ const MyPost = (props) => {
 
             <div>
                 <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}/>
-                <button className={classes.addButton} onClick={addPost}>Add post</button>
+                <button className={classes.addButton} onClick={onAddPost}>Add post</button>
             </div>
             <div className={classes.post}>
                 {postElements}
