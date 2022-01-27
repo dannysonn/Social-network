@@ -37,19 +37,21 @@ let initialState = {
 
 const dialogsReducer = (state = initialState, action) => {
 
+    let stateCopy = JSON.parse(JSON.stringify(state));
+
     if (action.type === ADD_MESSAGE) {
         let newMessage = {
             id: 6,
             message: state.newMessageText,
         };
 
-        state.messages.push(newMessage);
-        state.newMessageText = '';
+        stateCopy.messages.push(newMessage);
+        stateCopy.newMessageText = '';
     } else if (action.type === UPDATE_MESSAGE) {
-        state.newMessageText = action.newMessageText;
+        stateCopy.newMessageText = action.newMessageText;
     }
 
-    return state;
+    return stateCopy;
 }
 
 export const addMessageActionCreator = () => {
