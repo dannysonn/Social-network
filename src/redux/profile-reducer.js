@@ -1,5 +1,6 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_POST = 'UPDATE-POST';
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
 
 let initialState = {
     posts: [
@@ -7,6 +8,7 @@ let initialState = {
         {id: 2, message: `It's my first post`, likes: 5},
     ],
     newPostText: 'add post',
+    profile: null
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -23,6 +25,8 @@ const profileReducer = (state = initialState, action) => {
         stateCopy.newPostText = '';
     } else if (action.type === UPDATE_POST) {
         stateCopy.newPostText = action.newPostText;
+    } else if (action.type === SET_USER_PROFILE) {
+        return {...state, profile: action.profile}
     }
 
     return stateCopy;
@@ -31,12 +35,16 @@ const profileReducer = (state = initialState, action) => {
 export const addPostActionCreator = () => {
     return {type: ADD_POST};
 }
-
+export const setUserProfile = (profile) => {
+    return {type: SET_USER_PROFILE, profile};
+}
 export const updatePostActionCreator = (text) => {
     return {
         type: UPDATE_POST,
         newPostText: text,
     };
 }
+
+
 
 export default profileReducer;
