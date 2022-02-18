@@ -7,3 +7,12 @@
     width: 7%;
     height: 100%;
 }
+
+.loginBlock {
+    float: right;
+    color: white;
+}
+
+.loginBlock a {
+    color: white;
+}

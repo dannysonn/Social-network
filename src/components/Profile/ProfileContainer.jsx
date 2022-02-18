@@ -9,7 +9,7 @@ import {useMatch} from "react-router-dom";
 class ProfileContainer extends React.Component {
 
     componentDidMount() {
-        let userId = this.props.match ? this.props.match.params.userId : 2;
+        let userId = this.props.match ? this.props.match.params.userId : 22098;
 
         axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`).then(r => {
                 this.props.setUserProfile(r.data);
